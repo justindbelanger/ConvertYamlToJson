@@ -1,0 +1,22 @@
+* Motivation
+** Primary
+This script demonstrates converting YAML files to JSON files.
+** Secondary
+It also demonstrates executing C# code as a script! How awesome is this? Checkout [[http://scriptcs.net/][ScriptCS]] for one popular tool for C# scripting. Also--and perhaps more importantly--there's a tool that is built into the .NET Framework, [[https://github.com/dotnet/roslyn/wiki/Interactive-Window#repl][csi.exe]], that allows [[https://msdn.microsoft.com/en-gb/magazine/mt614271.aspx][interactively scripting in C#]].
+* Usage
+** ScriptCS
+If you want to use ScriptCS, just install it (perhaps via Chocolatey), then run
+#+BEGIN_SRC powershell
+scriptcs ConvertYamlToJson.csx -- "FileName.yaml"
+#+END_SRC
+** csi.exe
+For csi.exe, you must first run 
+#+BEGIN_SRC powershell
+.\restore_packages.ps1
+#+END_SRC
+ once to restore NuGet packages, then you can run 
+#+BEGIN_SRC powershell
+csi ConvertYamlToJson.csx "FileName.yaml"
+#+END_SRC
+
+You might have to ensure NuGet and/or some other tools are installed system-wide, first.
