@@ -1,5 +1,5 @@
 #r ".\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll"
-#r ".\packages\YamlDotNet.4.3.1\lib\net45\YamlDotNet.dll"
+#r ".\packages\YamlDotNet.5.2.1\lib\net45\YamlDotNet.dll"
 using Newtonsoft.Json;
 using System.IO;
 using YamlDotNet.Serialization;
